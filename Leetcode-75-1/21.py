@@ -1,0 +1,22 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        ## Recursive solution
+        # if either list is empty, return entirety of other list
+        # otherwise return smaller list
+        if list1 == None:
+            return list2 
+        elif list2 == None:
+            return list1
+        elif list1.val < list2.val:
+            list1.next = self.mergeTwoLists(list1.next, list2)
+            return list1 #sorted list contained within l1
+        else:
+            list2.next = self.mergeTwoLists(list1, list2.next)
+            return list2 #sorted list contained within l2
+
+#ironically linked lists make merge sort a lot easier to implement.
