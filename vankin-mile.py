@@ -73,3 +73,55 @@ easy_sequence = generate_branch_sequence("easy", 100)
 medium_sequence = generate_branch_sequence("medium", 100)
 difficult_sequence = generate_branch_sequence("difficult", 100)
 print (easy_sequence)
+
+def owoify(s: str) -> str:
+    # define wules to owoify the stwing OwO
+    owo_rules = {
+        "r": "w",
+        "l": "w",
+        "R": "W",
+        "L": "W",
+        "n": "ny",
+        "N": "NY",
+        "ove": "uv",
+        "you": "wu",
+        "ha": "wa",
+        "he": "we",
+        "ho": "wo",
+        "Hu": "Wu",
+        "Ha": "Wa",
+        "He": "We",
+        "Ho": "Wo",
+        "the ": "da ",
+        "The ": "Da ",
+        "th": "d",
+        "Th": "D",
+        "v": "vw",
+        "V": "Vw",
+    }
+
+    # owoify the stwing using the wules OwO
+    for k, v in owo_rules.items():
+        s = s.replace(k, v)
+
+    # add some cute emoticons OwO
+    s = s.replace(".", " kawaii face! ^w^ ")
+    s = s.replace("!", " exclamation! >w< ")
+    s = s.replace("?", " question? owo ")
+    s = s.replace(",", " nyaa~ ")
+
+    # wetuwn the owoified stwing UwU
+    return s
+
+# exampwe usage of the owoify function OwO
+input_stwing = "Bismillah Al-Rahman Al-Raheem\n\
+In the name of God the most Mericful the Beneficent.\n\
+Oh Nourisher and Provider of all things.\n\
+We offer our thanks and gratitude for this food, and for those who prepared it.\n\
+In a world where so many are hungry, may we eat this food with humble hearts.\n\
+We offer our thanks and gratitude for each member of our community and the opportunity that we all have to come together to do good.\n\
+Dear God, may you bless our efforts and help us sit present with one another, mindful of our purpose.\n\
+Bismillahi'wa' ala Barakatillah\n\
+In the name of God and with the blessings of God, Let us begin."
+owoified_stwing = owoify(input_stwing)
+print(owoified_stwing)

@@ -33,3 +33,5 @@ class Solution:
                 # cows are the minimum of the number of times a digit appears in secret and guess
                 # this is because the digits must be unique
         return str(bulls) + 'A' + str(cows) + 'B'
+
+print (Solution().getHint('2323', '3223'))
